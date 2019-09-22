@@ -5,6 +5,8 @@ before_install :
  - docker build -t viswa2489/client -f Dockerfile.dev  .
 script:
  - docker run -e CI=true viswa2489/client npm run test 
+
+
 deploy :
  provider : elasticbeanstalk
  region :"us-east-1"
